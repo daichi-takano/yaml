@@ -1,0 +1,37 @@
+package main                                           
+
+import (                                               
+    "fmt"                                              
+    "github.com/go-yaml/yaml"                          
+    "io/ioutil"                                        
+)                                           
+
+func main() {             
+    // test.yamlを []byte として読み込みます。                             
+    buf, err := ioutil.ReadFile("./test.yaml")               
+    if err != nil {                                    
+        fmt.Println(err)                               
+        return                                         
+    } 
+
+    // []byte を []map[string]string に変換します。                                                                        
+    data, err := ReadOnSliceMap(buf)                    
+    if err != nil {                                
+        fmt.Println(err)                           
+        return                                     
+    }                                              
+    fmt.Println(data)                               
+}                                                                                    
+
+// yaml形式の[]byteを渡すと[]map[string]stringに変換してくれる関数です。
+func ReadOnSliceMap(fileBuffer []byte) ([]map[string]string, error) {
+    data := make([]map[string]string, 20)
+    // ここで変換を行っています。
+    // []byteを渡すとデータ型に合わせて上手い事マッピングしてくれます。                            
+    err := yaml.Unmarshal(fileBuffer, &data)                         
+    if err != nil {                                                  
+        fmt.Println(err)                                             
+        return nil, err                                              
+    }                                                                
+    return data, nil                                                 
+}                  
