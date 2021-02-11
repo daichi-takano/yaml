@@ -48,11 +48,25 @@ Go言語とコンテナ　渋川よしき
 https://ascii.jp/elem/000/001/502/1502967/
 
 # main.go
+mian.goはYAMLファイルを利用したDockerfileの改善プログラムである。
+またbuildkitを使用しDockerよりも素早いコンテナ作成を行う。
 
 ## Dependency
 使用言語は GOlang　で　ver 1.15.2
 
 ## Setup
+
+YAMLファイルを使用するのでパッケージを取得してくる
+```
+go get go-yaml/yaml
+go get gopkg.in/yaml.v2
+```
+
+次にbuildkitを有効にするために以下のコマンドを実行する
+```
+$ export DOCKER_BUILDKIT=1
+$ docker build .
+```
 
 
 ## Usage
