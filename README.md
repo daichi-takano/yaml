@@ -1,11 +1,11 @@
 # libcontainer.go
-libcontainerとはGo言語で書かれているlibcontainerというライブラリです。 libcontainerを利用してコンテナを作成します。
+libcontainerとはGo言語で書かれているlibcontainerというライブラリである。 libcontainerを利用してコンテナを作成する。
 
 ### Dependency
 使用言語は Golang　で　ver 1.15.2
 
 ### Setup
-コンテナ内で新しいOSを起動するために必要なファイル一式を用意する必要があるため作成する
+コンテナ内で新しいOSを起動するために必要なファイル一式を用意する必要があるため作成する。
 ここではサイズが小さいAlpine Linuxのイメージに含まれているファイルを使用する。
 
 ```
@@ -72,6 +72,12 @@ $ docker build .
 
 ### Usage
 sample1.yamlの名前でDockerfileを作成する。
+YAMLファイルの書き換え方法は以下の通りである。
+|:Dockerfile:|:YAMLファイル:|
+|1 |2 |3 |
+|4 |5 |6 |
+
+
 
 以下のコマンドで実行が可能である。
 ```
