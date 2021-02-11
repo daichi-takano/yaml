@@ -74,10 +74,10 @@ $ docker build .
 sample1.yamlの名前でDockerfileを作成する。
 YAMLファイルの書き換え方法は以下の通りである。
 
-|:Dockerfile:|:YAMLファイル:|
-|1 |2 |3 |
-|4 |5 |6 |
-
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
 
 
 以下のコマンドで実行が可能である。
