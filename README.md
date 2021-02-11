@@ -1,6 +1,5 @@
 # libcontainer.go
-libcontainerとはGo言語で書かれているlibcontainerというライブラリです。
- libcontainerを利用してコンテナを作成します。
+libcontainerとはGo言語で書かれているlibcontainerというライブラリです。 libcontainerを利用してコンテナを作成します。
 
 ## Dependency
 使用言語は Golang　で　ver 1.15.2
