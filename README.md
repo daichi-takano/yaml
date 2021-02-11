@@ -6,12 +6,23 @@ libcontainerとはGo言語で書かれているlibcontainerというライブラ
 
 ## Setup
 コンテナ内で新しいOSを起動するために必要なファイル一式を用意する必要があるため作成する
+ここではサイズが小さいAlpine Linuxのイメージに含まれているファイルを使用する。
 
 ```
-docker pull alpine
+$docker pull alpine
 
+$ docker run --name alpine alpine 
+ 
+$ docker export alpine > alpine.tar 
+ 
+$ docker rm alpine 
 ```
 
+ライブラリを以下のコマンドで取得してくる
+```
+$go get github.com/opencontainers/runc/libcontainer ⏎
+$ go get golang.org/x/sys/unix
+```
 ## Usage
 
 
