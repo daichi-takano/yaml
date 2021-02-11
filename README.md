@@ -39,12 +39,14 @@ testing
 
 ### Authors
 libcontainerの作者   Open Container Initiative 
+
 https://github.com/opencontainers/runc/tree/master/libcontainer
 
 ### References
 実装などの参考文献
 
 Go言語とコンテナ　渋川よしき
+
 https://ascii.jp/elem/000/001/502/1502967/
 
 # main.go
@@ -74,24 +76,33 @@ $ docker build .
 sample1.yamlの名前でDockerfileを作成する。
 YAMLファイルの書き換え方法は以下の通りである。
 
-|  TH  |  TH  |
+|  Dockerfile  |  YAMLファイル  |
 | ---- | ---- |
-|  TD  |  TD  |
-|  TD  |  TD  |
+|  FROM  |  from  |
+|  EXPOSE  |  exposes  |
+|  RUN  |  runs  |
+|  CMD  |  commands  |
+|  LABEL  |  labels  |
+|  ENV  |  env  |
+|  ADD  |  add  |
+|  COPY  |  copy  |
+|  MAINTAINER  |  maintainer  |
+|  ENTRYPOINT  |  entrypoint  |
+|  VOLUME  |  volume  |
+|  user  |  user  |
+|  WORKDIR  |  workdir  |
 
 
 以下のコマンドで実行が可能である。
 ```
-$ go run libcontainer.go 
+$ go run main.go 
 
 ```
 
-
-### License
-
-
 ### Authors
-
+作者　東京工科大学　コンピュータサイエンス学部　高野大地
 
 ### References
+golangでYAMLファイルを読み込む
 
+https://ota42y.com/blog/2014/11/13/go-yaml/
